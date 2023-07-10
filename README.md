@@ -17,3 +17,6 @@ v1.0.5- note:
 
 v1.0.6- note:
     added function running opened port check and the Worklist attack http, port 80.
+
+v1.0.7- note:
+    added wordlist
