@@ -37,3 +37,6 @@ v1.0.6- note:
 
 v1.0.7- note:
     added wordlist
+
+v1.0.8- note:
+    bug fix.
