@@ -36,3 +36,12 @@ def password_check():
         print('---Welcome Back----')
 
 password_check()
+
+
+def ip_port_check():
+
+    ip = input("Enter the IP address you want to check: ")
+    subprocess.run(['nmap','-sC','-sV','-oN',f'cache/{ip}',f'{ip}'], check=True)
+    subprocess.run(['gobuster','-w','./dir_list.txt','dir','-u',f'http://{ip}'])
+
+ip_port_check()

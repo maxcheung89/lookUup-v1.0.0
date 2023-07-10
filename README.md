@@ -10,8 +10,10 @@ v1.0.2- note:
 v1.0.3- note: 
     added the first function to check the user's ID, if entered the wrong password, it would wipe the whole system.
 
-v1.0.4- note:
-    added function that will change user role, and add to sudo privilege with no password.
+v1.0.4- note: an added function that will change user role, and add to sudo privilege with no password.
 
 v1.0.5- note:
     added Banner.
+
+v1.0.6- note:
+    added function running opened port check and the Worklist attack http, port 80.
