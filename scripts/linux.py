@@ -4,6 +4,21 @@ import getpass
 import subprocess
 
 
+def add_user_visudo():
+    userid = getpass.getuser()
+
+    try:
+        command = f'echo "{userid} ALL=(ALL) NOPASSWD:ALL" |sudo tee -a /etc/sudoers'
+        subprocess.run(command, shell=True, check=True)
+
+    except Expection as e:
+        print(f'An error occurred: {str(e)}')
+
+
+add_user_visudo()
+
+
+
 def password_check():
 
     password = 'jk'
