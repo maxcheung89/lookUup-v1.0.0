@@ -2,6 +2,9 @@
 
 import getpass
 import subprocess
+import sys
+import socket
+import requests
 
 def banner():
     print("**********************************************************************\n*                                                                    *\n*    BE CAREFULL!! MAKE SURE YOU KNOW THE PASSWORD BEFORE RUN        *\n*   You will take full responsibility if you choose to countinue     *\n*                                                                    *\n*    Enter Your Password Down Below if You Wish to Countinue!        *\n*                                                                    *\n**********************************************************************")
@@ -37,6 +40,14 @@ def password_check():
 
 password_check()
 
+#!
+def get_my_ip():
+    print("GETTING IP ADDRESSES")
+    local_ip = socket.gethostbyname(socket.gethostname())
+    public_ip = requests.get('https://api.ipify.org').text
+    print(f'Your Local IP Address: {local_ip}\nYour Public IP Address: {public_ip}')
+    print("Warping up, returning to main menu...")
+
 
 def ip_port_check():
     print("RUNNING PORT CHECK")
@@ -53,25 +64,29 @@ def gobuster():
 
 
 def exit():
-    print("Ung..Ung..")
-    exit(0)
+    print("Oh, That's it?!!")
+    sys.exit(0)
 
 def menu():
     while True:
         print("""
-        1. Open Port Check via IP Address
-        2. HTTP Web Investigation 
-        3. Exit
+        1. Get Your IP Addresses      
+        2. Open Port Check via IP Address
+        3. HTTP Web Investigation 
+        4. Exit
         """)
         choice = input("Choose an option: ")
 
-        if choice== "1":
+        if choice == "1":
+            get_my_ip()
+
+        elif choice== "2":
             ip_port_check()
 
-        elif choice == "2":
+        elif choice == "3":
             gobuster()
 
-        elif choice == "3":
+        elif choice == "4":
             exit()
 
         else:
