@@ -45,3 +45,5 @@ v1.0.8- note:
 v1.0.9- note:
     separated basic functions to two. # this might help to build more functions in a menu.
 
+v1.0.10- note:
+    add option menu to function tools.
