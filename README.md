@@ -47,3 +47,6 @@ v1.0.9- note:
 
 v1.0.10- note:
     add option menu to function tools.
+
+v1.0.11- note:
+    bug fix
