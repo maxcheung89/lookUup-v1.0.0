@@ -60,4 +60,6 @@ v1.0.13- note:
 v.1.0.14- note:
     -fix the local IP address, before would the show lo ip.
     -fix the unnecessary out put.
-     
+    
+v.1.0.15- note:
+    add feature welcome page will show current user id.

