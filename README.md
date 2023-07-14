@@ -55,4 +55,9 @@ v1.0.12- note:
     add find my IP function. Minor bug fix.
 
 v1.0.13- note:
-    edited description 
+    edited description
+
+v.1.0.14- note:
+    -fix the local IP address, before would the show lo ip.
+    -fix the unnecessary out put.
+     
