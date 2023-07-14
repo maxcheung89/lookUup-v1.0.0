@@ -53,3 +53,6 @@ v1.0.11- note:
 
 v1.0.12- note:
     add find my IP function. Minor bug fix.
+
+v1.0.13- note:
+    edited description 

