@@ -69,3 +69,6 @@ v1.0.16- note:
 
 v1.1.1- note:
     Encrypted code file
+
+v1.1.2- note:
+    bugfix 

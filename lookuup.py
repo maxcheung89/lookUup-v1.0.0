@@ -2,6 +2,7 @@
 
 import platform
 import os
+import subprocess
 
 def banner():
     print("**********************************************************************\n*                                                                    *\n*    BE CAREFUL!! MAKE SURE YOU KNOW THE PASSWORD BEFORE RUN         *\n*   You will take full responsibility if you choose to countinue     *\n*                                                                    *\n*    Enter Your Password Down Below if You Wish to Countinue!        *\n*                                                                    *\n**********************************************************************")
@@ -14,7 +15,8 @@ def sys_check():
     if platform.system() == "Windows":
         script_path = os.path.join("./scripts", "windows.py")
     elif platform.system() == "Linux":
-        script_path = os.path.join("./scripts", "linux")
+        executable_path = "./scripts/linux"
+        script_path = subprocess.run(executable_path)
     else:
         print("Unsupported operating system.")
         exit()
