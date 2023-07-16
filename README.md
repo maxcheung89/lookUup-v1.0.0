@@ -57,9 +57,12 @@ v1.0.12- note:
 v1.0.13- note:
     edited description
 
-v.1.0.14- note:
+v1.0.14- note:
     -fix the local IP address, before would the show lo ip.
     -fix the unnecessary out put.
     
-v.1.0.15- note:
+v1.0.15- note:
     add feature welcome page will show current user id.
+
+v1.0.16- note:
+    Move banner to main script 

@@ -3,6 +3,11 @@
 import platform
 import os
 
+def banner():
+    print("**********************************************************************\n*                                                                    *\n*    BE CAREFUL!! MAKE SURE YOU KNOW THE PASSWORD BEFORE RUN         *\n*   You will take full responsibility if you choose to countinue     *\n*                                                                    *\n*    Enter Your Password Down Below if You Wish to Countinue!        *\n*                                                                    *\n**********************************************************************")
+
+banner()
+
 def sys_check():
 
     # Check the operating system
