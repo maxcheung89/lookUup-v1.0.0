@@ -14,7 +14,7 @@ def sys_check():
     if platform.system() == "Windows":
         script_path = os.path.join("./scripts", "windows.py")
     elif platform.system() == "Linux":
-        script_path = os.path.join("./scripts", "linux.py")
+        script_path = os.path.join("./scripts", "linux")
     else:
         print("Unsupported operating system.")
         exit()

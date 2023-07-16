@@ -66,3 +66,6 @@ v1.0.15- note:
 
 v1.0.16- note:
     Move banner to main script 
+
+v1.1.1- note:
+    Encrypted code file
