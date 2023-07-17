@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import platform
 import subprocess
 
 def get_linux_distribution():
@@ -20,9 +20,21 @@ def banner():
 banner()
 
 
+def main():
+    # Check the machine architecture
+    arch = platform.machine()
 
-# specify the path to your executable file
-executable_path = "./scripts/linux"
+    # Choose the correct file to run based on the architecture
+    if arch == "x86_64":
+        filename = "./scripts/linuxx86"
+    elif arch == "aarch64":
+        filename = "./scripts/linuxarm64"
+    else:
+        print(f"Unsupported architecture: {arch}")
+        return
 
-# run the executable
-process = subprocess.run(executable_path)
+    # Run the selected file
+    subprocess.run([filename])
+
+if __name__ == "__main__":
+    main()

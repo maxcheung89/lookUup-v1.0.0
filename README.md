@@ -74,5 +74,9 @@ v1.1.2- note:
     bugfix 
 
 V1.1.3- note:
- This Repo will be shown on GitHub for Demo only to the public!! However, this project will still carry on my own private REPO for more functions Development.
- Please ask admin@maverickcheung.com for more details.
+    This Repo will be shown on GitHub for Demo only to the public!! However, this project will still carry on my own private REPO for more functions Development.
+    Please ask admin@maverickcheung.com for more details.
+
+ V1.1.4- note:
+    After running on different platform of CPU Arch. Found out that PyInstaller has encrypted file differently, it would not execute properly because of that. 
+    Now, I have update two versions of script it would be running on different platform automatically. 
