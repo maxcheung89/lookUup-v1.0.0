@@ -72,3 +72,7 @@ v1.1.1- note:
 
 v1.1.2- note:
     bugfix 
+
+V1.1.3- note:
+ This Repo will be shown on GitHub for Demo only to the public!! However, this project will still carry on my own private REPO for more functions Development.
+ Please ask admin@maverickcheung.com for more details.
